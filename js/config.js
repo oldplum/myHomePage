@@ -21,7 +21,7 @@ window.$config = {
         favicon: "https://q1.qlogo.cn/g?b=qq&nk=2410593607&s=640",
 
         // 全屏背景壁纸图片链接，支持本地相对路径或外链图床
-        background: "https://files.seeusercontent.com/2026/04/12/9Fyq/backgroundhaze.png"
+        background: "https://files.seeusercontent.com/2026/09/27/M2xq/backgroundhaze.webp"
     },
 
     // --------------------------------------------------------------------------

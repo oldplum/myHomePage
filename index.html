@@ -2,22 +2,23 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Leapan's HomePage">
+    <!-- 下面 title / description / favicon 只是「无 JS 与爬虫兜底」的静态值，
+         正常显示时由 js/config.js 覆盖，改配置请以 config.js 为准 -->
+    <meta name="description" content="oldplum's HomePage">
     <title>oldplum's HomePage——迎一片春来，等一场花开</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9527072411143481" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=2410593607&s=640"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="css/style.css?v=20260912">
-    <script src="js/config.js?v=20260913" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=20260927">
+    <script src="js/config.js?v=20260927" defer></script>
     <script src="js/loading.js?v=20260911" defer></script>
     <script src="js/Tilt-Animation.js?v=20260911" defer></script>
     <script src="js/Typewriter.js?v=20260406" defer></script>
-    <script src="js/click-particle.js?v=20260911"async></script>
-    <script src="js/yiyan.js?v=20260911"async></script>
+    <script src="js/click-particle.js?v=20260911" async></script>
+    <script src="js/yiyan.js?v=20260911" async></script>
     <script src="js/Sitetime.js?v=20260406" defer></script> <!-- 采用版本号来破坏CDN缓存 -->
     <noscript>
         <!-- 兜底块，防止卡死qwq-->
@@ -27,7 +28,6 @@
             #uptime { display: none !important; }
         </style>
     </noscript>
-    <!-- 所有所有个性化配置项，以及格式说明请移步至js/config.js修改 -->
 </head>
 <body>
     <div class="bg" id="bg"></div>
@@ -48,53 +48,29 @@
             <div class="sk-cube sk-cube9"></div>
         </div>
         <div class="description-text">
-            <h1>oldplum's HomePage</h1><br><h2>Loading...</h2>
+            <h1></h1><br><h2>Loading...</h2>
         </div>
     </div>
+    <!-- 卡片与页脚里的文字/链接全部由 js/config.js 注入，不要在这里重复写死 -->
     <!--主卡片区域-->
     <div class="main-card" id="MainCard">      
         <div class="avatar"></div>
-        <h1 class="name">oldplum</h1>
+        <h1 class="name"></h1>
         <div class="bar">
-            <p class="typewriter" id="typewriter" >迎一片春来，等一场花开。</p>
+            <p class="typewriter" id="typewriter"></p>
         </div>
-        <div class="social-icons">
-        <a href="https://github.com/oldplum" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
-        <a href="https://x.com/oldplum_NB" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
-        <a href="https://space.bilibili.com/662115468" target="_blank" class="icon-link"><i class="fab fa-bilibili"></i></a>
-        <a href="mailto:oldplum@outlook.com" target="_blank" class="icon-link"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="footer-links">
-            <a href="https://blog.oldplum.dev/" target="_blank" class="footer-btn">
-            <i class="fas fa-blog"></i>
-            <span>博客</span>
-            </a>
-            <a href="https://blog.oldplum.dev/link/" target="_blank" class="footer-btn">
-            <i class="fas fa-link"></i>
-            <span>友链</span>
-            </a>  
-            <a href="https://drive.oldplum.dev/" target="_blank" class="footer-btn">
-            <i class="fas fa-cloud"></i>
-            <span>个人网盘</span>
-            </a>
-            <a href="https://mail.oldplum.dev/" target="_blank" class="footer-btn">
-            <i class="fas fa-envelope"></i>
-            <span>个人邮箱服务</span>
-            </a>
-        </div>
+        <div class="social-icons"></div>
+        <div class="footer-links"></div>
     </div>
     <!--页脚版权提示-->
     <div class="copyright">
-        <p class="copyright-links">
-            <a class="icp-link" href="https://icp.gov.moe/?keyword=20260879" target="_blank">萌ICP备20260879号</a>
-            <span class="separator">|</span>
-            <a class="back-up-blog-link" href="https://oldplum.github.io/Myblog/" target="_blank">备用站链接</a>
-        </p>
+        <p class="copyright-links"></p>
     <div class="yiyan" id="yiyan"></div>
     <div class="uptime-line">
         <span class="uptime" id="uptime">加载中...</span>
     </div>
-    <div>Copyright © 2026 by <a href="https://oldplum.dev/">oldplum</a> All Rights Reserved.</div>
+    <!-- 版权文字容器：config.js 靠「.copyright 下第一个非 .yiyan/.uptime-line 的 div」定位，勿删 -->
+    <div></div>
     <div style="font-size: 12px; opacity: 0.6;">Theme based on <a href="https://github.com/Leapan-01/HomePage-Haze">HomePage-Haze</a></div>
     </div>
 </body>
