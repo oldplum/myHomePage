@@ -1,64 +1,63 @@
-# HomePage-Haze（微岚主页）
-一个简洁、美观、具有特色功能的纯静态个人主页。使用 HTML+CSS+JavaScript 开发。
-### 阅读代码前提示
-在本项目中，可能会有以下现象，包括但不限于：
+# myHomePage
 
-- 书写潦草
-- 注释奇怪
-- 风格不同
-- 逻辑混乱
+> oldplum 的个人静态主页，基于 [HomePage-Haze](https://github.com/Leapan-01/HomePage-Haze) 定制构建，部署于 Cloudflare Pages。
 
-等诸多情况。
+🌐 **线上访问**：[oldplum.dev](https://oldplum.dev/)
 
-当然，如果有任何建议或指正，也欢迎提 Issue 或 PR，我会虚心接受（但可能改不动或者根本没时间改qwq ....）。
-## 特色功能
-1. 方块加载动画以及遮罩层拉扯效果
-2. 现代化的毛玻璃背景
-3. 鼠标移动到卡片上的视差效果
-4. 获得焦点时的头像旋转
-5. 搜索栏打字机效果
-6. 鼠标涟漪波纹和粒子效果
-7. 页脚时间统计功能以及每日一言
-8. 统一独立配置文件，开箱即用轻松自定义
-## 已知Bug
-- 当页面处于加载的时候，左右遮罩层中间可能会有一道难以察觉的细线
-- 在使用部分移动端设备访问时，底部版权提示信息可能会与主卡片重叠（已完成！q(≧▽≦q)）
-## 远景规划
-1. 修复已知 Bug
-2. 鼠标样式修改
-3. 使用相同的风格添加“友链”等其他子页面
-4. 添加后端
-5. 完善 404 页面
-6. 添加留言板
-7. 完善页脚功能，一言，统计时间（已完成！q(≧▽≦q)）
-8. 添加惯性滚动功能
-9. 添加浅色/深色模式自动切换功能
-10. 添加还有其他我没想到的功能
-## 自定义配置
-本项目现已支持**统一配置文件** ，只需编辑 `js/config.js` 文件即可：
+---
 
-- **站点信息**：网站标题、SEO 描述、Favicon 图标、全屏背景壁纸
-- **个人卡片**：头像、站长昵称、开屏加载文案、副标题打字机格言
-- **社交媒体**：自由增减 GitHub、Twitter、Bilibili、邮箱等社交图标
-- **快捷按钮**：自由配置博客、友链、RSS、网盘等卡片跳转按钮
-- **页脚与统计**：建站起始时间（自动计算运行天数）、异次元之旅、ICP 备案、备用站、版权归属（年份支持自动跟随当前年份）
+## 🌟 特色功能
 
-> 详细配置项及格式说明请直接查阅 `js/config.js` 文件内部的详细中文注释。
-## 依赖
-- [Font Awesome 6](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)（图标）
-- [Google Fonts](https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap)（思源宋体）
-- [yiyan api](https://developer.hitokoto.cn/)（一言api）
-## 许可证
-GPL-3.0 license © [Leapan](https://github.com/Leapan-01)
-## 贡献
-如果你觉得哪里可以改进，欢迎提 Issue 或 PR，或者直接使用邮箱联系我：lp-gardenwalk(at)outlook(dot)com
-## Thanks
-- 开屏遮罩动画（Tilt-Animation.js）参照 https://github.com/imsyy/home （ https://www.imsyy.top/ ）的设计
-- MainCard 参照 https://github.com/StarnekOvO/myself-ghpage （ https://starneko.com/ ）的设计
-- 感谢 [oldplum](https://github.com/oldplum "oldplum") 对本项目的许多支持与贡献
-- Font Awesome 6 CDN 由 https://www.zstatic.net/ 提供
-## 补充
-点点Star谢谢喵(/▽＼)
-<p>咱是笨蛋喵
+1. **开屏动画**：左右遮罩拉扯展开动效与方块加载动画
+2. **毛玻璃质感**：现代优雅的半透明毛玻璃主卡片背景
+3. **交互反馈**：鼠标 3D 视差倾斜悬浮效果、头像 360° 旋转与物理微弹簧按压回弹
+4. **视觉动效**：打字机格言动效、鼠标点击粒子扩散与波纹特效
+5. **动态数据**：实时建站天数/时/分/秒统计、每日一言（Hitokoto）
+6. **配置解耦**：所有个人信息、社交账号、跳转按钮统一于 `js/config.js` 中维护，无需修改 HTML/CSS
 
+---
 
+## 🛠️ 项目结构
+
+```text
+├── css/
+│   └── style.css            # 页面主样式与动效
+├── js/
+│   ├── config.js            # 核心配置文件（个人信息、链接、外观在此修改）
+│   ├── loading.js           # 开屏加载遮罩动效
+│   ├── Tilt-Animation.js    # 主卡片 3D 视差与物理反馈
+│   ├── Typewriter.js        # 打字机副标题动效
+│   ├── click-particle.js    # 鼠标点击粒子动效
+│   ├── Sitetime.js          # 建站运行时长统计
+│   └── yiyan.js             # 一言 API 请求与渲染
+├── index.html               # 页面结构入口
+└── README.md
+```
+
+---
+
+## ⚙️ 核心配置说明
+
+本项目支持集中式配置驱动，编辑 [`js/config.js`](js/config.js) 即可快速自定义所有内容：
+
+- **基础站点信息**：网站标题、SEO 描述、Favicon 图标、全屏背景壁纸
+- **个人主卡片**：头像图片、站长昵称、开屏大标题、打字机副标题格言
+- **社交媒体图标**：自由增减 GitHub、Twitter/X、B站、邮箱等图标与链接
+- **快捷导航按钮**：自由配置博客、友链、个人网盘、个人邮箱服务等跳转卡片
+- **页脚与统计**：建站起始时间（自动计算并实时刷新运行天数）、萌ICP备、备用站、自增版权年份
+
+---
+
+## 📦 依赖与鸣谢
+
+* **基础主题**：基于 [Leapan-01/HomePage-Haze](https://github.com/Leapan-01/HomePage-Haze) 主题
+* **图标库**：[Font Awesome 6](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css) (CDN by zstatic)
+* **字体**：[Google Fonts - Noto Serif SC](https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap)（思源宋体）
+* **API 服务**：[Hitokoto 一言](https://developer.hitokoto.cn/)
+* **灵感来源**：[imsyy/home](https://github.com/imsyy/home) & [StarnekOvO/myself-ghpage](https://github.com/StarnekOvO/myself-ghpage)
+
+---
+
+## 📄 许可证
+
+本项目遵循 [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html) 开源。
